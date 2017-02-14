@@ -82,6 +82,12 @@ import it.nicolabrogelli.imedici.utils.Utils;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
+/**
+ * Design and developed by Nicola Brogelli
+ *
+ * Created using AppCompatActivity.
+ */
+
 public class ActivityCharacters extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener,

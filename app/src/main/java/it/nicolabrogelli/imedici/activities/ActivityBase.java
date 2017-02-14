@@ -7,7 +7,7 @@ import android.util.TypedValue;
 import it.nicolabrogelli.imedici.R;
 
 /**
- * Design and developed by pongodev.com
+ * Design and developed by Nicola Brogelli
  *
  * ActivityBase is created to handle scrolling page event.
  * Modified from ObservableScrollView library.

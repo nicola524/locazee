@@ -8,7 +8,7 @@
 
     <!-- Screen title -->
     <string name="about" translatable="false">About</string>
-    <string name="direction" translatable="false">Direction</string>
+    <string name="direction">Direction</string>
 
     <!-- Additional category -->
     <string name="all_places">All Places</string>
@@ -19,7 +19,7 @@
     <string name="share">SHARE</string>
     <string name="open_permission" translatable="false">OPEN PERMISSION</string>
     <string name="open_setting" translatable="false">OPEN SETTING</string>
-    <string name="close_app" translatable="false">CLOSE APP</string>
+    <string name="close_app">CLOSE APP</string>
 
     <!-- DO NOT change preferences key below -->
     <string name="pref_share_key" translatable="false">prefShareKey</string>
@@ -44,7 +44,7 @@
     <string name="permission" translatable="false">Permission</string>
     <string name="subject" translatable="false">Perfect app to not get lost in the city</string>
     <string name="message" translatable="false"> is city app that will help you explore the city. Download it at </string>
-    <string name="open_with" translatable="false">Open with:</string>
+    <string name="open_with">Open with:</string>
     <string name="phone">Phone:</string>
     <string name="sent_via_message" translatable="false">This message was sent from</string>
     <string name="download">Download</string>

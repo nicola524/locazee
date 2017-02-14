@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import it.nicolabrogelli.imedici.R;
 
 /**
- * Design and developed by pongodev.com
+ * Design and developed by Nicola Brogelli
  *
  * ActivitySplash is created to display welcome screen.
  * Created using AppCompatActivity.

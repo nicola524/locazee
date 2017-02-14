@@ -88,7 +88,7 @@ import it.nicolabrogelli.imedici.utils.Utils;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 /**
- * Design and developed by pongodev.com
+ * Design and developed by Nicola Brogelli
  *
  * ActivityHome is created to display locations data in map view and list view.
  * Created using AppCompatActivity.
@@ -729,16 +729,7 @@ public class ActivityHome extends AppCompatActivity
                 Log.d(Utils.TAG_PONGODEV + TAG, "All location settings are satisfied.");
                 if (mCurrentLocation == null) {
                     Log.d(Utils.TAG_PONGODEV + TAG, "onResult SUCCESS mCurrentLocation == null");
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
+
                     mCurrentLocation = LocationServices.FusedLocationApi
                             .getLastLocation(mGoogleApiClient);
 
