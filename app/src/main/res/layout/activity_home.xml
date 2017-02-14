@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background_color">
+
+    <!-- Toolbar with spinner -->
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primary_color"
+        android:titleTextAppearance="@color/text_and_icon_color"
+        app:popupTheme="@style/Theme.AppCompat">
+        <Spinner
+            android:id="@+id/spnCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginRight="10dp"/>
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <!-- Admob banner -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:background="@color/window_background_color"
+        android:layout_below="@+id/toolbar">
+    </com.google.android.gms.ads.AdView>
+
+
+    <!-- Map content -->
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@+id/adView"/>
+
+    <!-- Location list -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_background_color"
+        android:visibility="visible"
+        android:layout_below="@+id/map"
+        android:layout_above="@+id/bottom_navigation" />
+
+
+
+    <!-- Fab my location button -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/non_standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:src="@mipmap/ic_my_location_white_36dp" />
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>

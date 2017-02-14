@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "it.nicolabrogelli.imedici"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 7
+        versionName "3.1"
+        multiDexEnabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile('com.afollestad.material-dialogs:core:0.8.5.0@aar') {
+        transitive = true
+    }
+    compile project(':MaterialDesignOgm')
+    compile project(path: ':MaterialDesignOgm')
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.github.AndroidDeveloperLB:MaterialPreferenceLibrary:5'
+    compile 'com.aurelhubert:ahbottomnavigation:0.1.3'
+
+}

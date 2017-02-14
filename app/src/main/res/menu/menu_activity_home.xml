@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="it.nicolabrogelli.imedici.activities.ActivityHome">
+    <item android:id="@+id/menuAbout"
+        android:title="@string/action_about"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+   <item android:id="@+id/menuView"
+        android:icon="@mipmap/ic_view_list_white_36dp"
+        android:title="@string/action_view"
+        app:showAsAction="never" />
+    <item android:id="@+id/menuSetting"
+        android:icon="@android:mipmap/sym_def_app_icon"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        />
+</menu>

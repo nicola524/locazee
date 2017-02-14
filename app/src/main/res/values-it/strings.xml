@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Locazee</string>
+    <string name="website" translatable="false">WEBSITE</string>
+    <string name="unable_to_get_direction">Impossibile ottenere le indicazioni dalla vostra posizione.</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="address">Indirizzo</string>
+    <string name="all_places">Tutte le Categorie</string>
+    <string name="call">CHIAMA</string>
+    <string name="gps_not_enabled_alert">Il GPS non è abilitato. L\'applicazione sfrutterà le coordinate di default.</string>
+    <string name="distance_alert">La tua posizione è fuori dal range. L\'applicazione sfutterà la posizione di default.</string>
+    <string name="google_maps_installation">Google Maps non è installato, lo vuoi intallare?</string>
+    <string name="phone">Telefono:</string>
+    <string name="play_services_available">I Google Play Services sono dispnibili</string>
+    <string name="pref_app_title">Nome dell\' Applicazione</string>
+    <string name="pref_copyright_summary">Copyright 2016 Nicola Brogelli. Tuttii i diritti sono riservati</string>
+    <string name="pref_copyright_title">Copyright</string>
+    <string name="pref_share_title">Chiama un amico</string>
+    <string name="pref_share_summary">Chiama un amico con questa applicazione</string>
+    <string name="pref_title_display_name">Visualizza il Nome</string>
+    <string name="pref_title_km">Abilita il Range Manuale</string>
+    <string name="pref_version_summary">Version 3.1</string>
+    <string name="pref_version_title">Build Version</string>
+    <string name="share">CONDIVIDI</string>
+    <string name="share_to">Condividi</string>
+    <string name="no_phone_available">Non è disponibile un numero di telefono.</string>
+    <string name="no_website_available">Non è disponibile un sito internet.</string>
+    <string name="download">Download</string>
+    <string name="pref_title_vibrate">Vibrazione</string>
+    <string name="all_characters">Personaggi</string>
+</resources>

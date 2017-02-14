@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="it.nicolabrogelli.imedici.activities.ActivityDetailScrolling"
+    tools:showIn="@layout/activity_detail_scrolling">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Location name, category, and distance -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/standard_margin"
+            android:paddingBottom="@dimen/standard_margin"
+            android:background="@color/primary_color">
+
+            <TextView
+                android:id="@+id/txtLocationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/standard_margin"
+                android:paddingRight="@dimen/item_padding_right_with_fab"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/headline"
+                android:textColor="@color/material_background_color"
+                android:textStyle="bold"
+                android:text="Museum of Arts and Design"/>
+
+            <TextView
+                android:id="@+id/txtLocationCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/standard_margin"
+                android:paddingRight="@dimen/item_padding_right_with_fab"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/txtLocationName"
+                android:textSize="@dimen/body_1"
+                android:textColor="@color/material_background_color"
+                android:text="attractiond"/>
+
+            <TextView
+                android:id="@+id/txtLocationDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/standard_margin"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtLocationName"
+                android:textStyle="bold"
+                android:textSize="@dimen/body_1"
+                android:textColor="@color/material_background_color"
+                android:text="0,85 km"/>
+
+        </RelativeLayout>
+
+        <!-- Action buttons to call, website, and share -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/standard_margin"
+            android:paddingBottom="@dimen/standard_margin"
+            android:paddingLeft="@dimen/standard_margin"
+            android:paddingRight="@dimen/standard_margin"
+            android:orientation="horizontal"
+            android:background="@color/material_background_color"
+            android:layout_below="@+id/divider">
+            <!-- Call button -->
+
+            <LinearLayout
+                android:id="@+id/btnCall"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/ic_local_phone_grey600_48dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/primary_color"
+                    android:layout_centerVertical="true"
+                    android:text="@string/call"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnWebsite"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/ic_public_black_48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/primary_color"
+                    android:layout_centerVertical="true"
+                    android:text="@string/website" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnShare"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/ic_share_black_48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/primary_color"
+                    android:layout_centerVertical="true"
+                    android:text="@string/share" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Map card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_light_background">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/separatore"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_light_background">
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/separatore"/>
+        </LinearLayout>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/webView"
+            android:background="@color/cardview_light_background"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            />
+
+        <!-- Admob banner -->
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            android:layout_gravity="top|center">
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
