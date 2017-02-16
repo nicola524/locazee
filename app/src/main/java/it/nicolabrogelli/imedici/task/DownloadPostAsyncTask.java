@@ -28,7 +28,7 @@ public class DownloadPostAsyncTask extends AsyncTask<String, Post, Post> {
     //private ArrayList<Post> postArrayList;
 
     // URL to get contacts JSON
-    private  String site_url = "http://www.aviscerretoguidi.it/api/get_post/?id=7774";
+    private  String site_url = "http://www.bertiinformatica.it/medici/api/get_post/?id=3828";
 
     // JSON Node names
     private static final String TAG_POSTS = "posts";

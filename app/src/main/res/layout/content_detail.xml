@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="@color/divider_color"
+    android:background="@color/cardview_light_background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="it.nicolabrogelli.imedici.activities.ActivityDetailScrolling"
     tools:showIn="@layout/activity_detail_scrolling">
@@ -71,12 +70,7 @@
             android:paddingLeft="@dimen/standard_margin"
             android:paddingRight="@dimen/standard_margin"
             android:orientation="horizontal"
-
-            android:layout_marginTop="@dimen/card_margin"
-            android:layout_marginBottom="@dimen/card_margin"
-            android:layout_marginLeft="@dimen/card_margin"
-            android:layout_marginRight="@dimen/card_margin"
-            android:background="@drawable/background_square"
+            android:background="@color/material_background_color"
             android:layout_below="@+id/divider">
             <!-- Call button -->
 
@@ -156,7 +150,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cardview_light_background"
-            android:visibility="gone">
+            android:visibility="visible">
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="10dp"
@@ -172,11 +166,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="visible"
-
-            android:layout_marginBottom="@dimen/card_margin"
-            android:layout_marginLeft="@dimen/card_margin"
-            android:layout_marginRight="@dimen/card_margin"
-            android:background="@drawable/background_square"
             >
 
             <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -192,7 +181,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cardview_light_background"
-            android:visibility="gone">
+            android:visibility="visible">
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="10dp"
@@ -203,14 +192,10 @@
                 android:src="@drawable/separatore"/>
         </LinearLayout>
 
+        <!-- WEB WIEW -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/card_margin"
-            android:layout_marginLeft="@dimen/small_margin"
-            android:layout_marginRight="@dimen/small_margin"
-            android:background="@drawable/background_square"
-            >
+            android:layout_height="match_parent">
 
             <WebView
                 android:layout_width="match_parent"
@@ -222,6 +207,7 @@
                 />
 
         </LinearLayout>
+
         <!-- Admob banner -->
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
