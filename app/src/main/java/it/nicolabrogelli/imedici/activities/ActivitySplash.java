@@ -11,17 +11,13 @@ import android.view.WindowManager;
 import it.nicolabrogelli.imedici.R;
 
 /**
- * Design and developed by Nicola Brogelli
+ * Design and developed by pongodev.com
  *
  * ActivitySplash is created to display welcome screen.
  * Created using AppCompatActivity.
  */
 public class ActivitySplash extends AppCompatActivity {
 
-    /**
-     *
-     * @param savedInstanceState
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Configuration in Android API below 21 to set window to full screen.
@@ -36,18 +32,9 @@ public class ActivitySplash extends AppCompatActivity {
         new Loading().execute();
     }
 
-    /**
-     * Loading, Crea un Loading di attesa prima di richiamare l'Activity di avvio
-     *
-     */
+    // Asynctask class to process loading in background
     public class Loading extends AsyncTask<Void, Void, Void>{
 
-        /**
-         * doInBackground
-         *
-         * @param voids
-         * @return
-         */
         @Override
         protected Void doInBackground(Void... voids) {
 
@@ -59,15 +46,10 @@ public class ActivitySplash extends AppCompatActivity {
             return null;
         }
 
-        /**
-         * onPostExecute
-         *
-         * @param aVoid
-         */
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-
+            // When progress finished, open ActivityHome
             Intent homeIntent = new Intent(getApplicationContext(), ActivityHome.class);
             startActivity(homeIntent);
             overridePendingTransition(R.anim.open_next, R.anim.close_main);

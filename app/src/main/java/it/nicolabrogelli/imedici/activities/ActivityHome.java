@@ -88,7 +88,7 @@ import it.nicolabrogelli.imedici.utils.Utils;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 /**
- * Design and developed by Nicola Brogelli
+ * Design and developed by pongodev.com
  *
  * ActivityHome is created to display locations data in map view and list view.
  * Created using AppCompatActivity.
@@ -164,7 +164,7 @@ public class ActivityHome extends AppCompatActivity
     private ArrayList<String> mLocationNames = new ArrayList<>();
     private ArrayList<String> mLocationImages = new ArrayList<>();
     private ArrayList<String> mLocationAddresses = new ArrayList<>();
-    private ArrayList<Float>  mLocationDistances = new ArrayList<>();
+    private ArrayList<Float> mLocationDistances = new ArrayList<>();
     private ArrayList<Double> mLocationLatitudes = new ArrayList<>();
     private ArrayList<Double> mLocationLongitudes = new ArrayList<>();
     private ArrayList<String> mLocationMarkers = new ArrayList<>();
@@ -729,7 +729,7 @@ public class ActivityHome extends AppCompatActivity
                 Log.d(Utils.TAG_PONGODEV + TAG, "All location settings are satisfied.");
                 if (mCurrentLocation == null) {
                     Log.d(Utils.TAG_PONGODEV + TAG, "onResult SUCCESS mCurrentLocation == null");
-
+                    
                     mCurrentLocation = LocationServices.FusedLocationApi
                             .getLastLocation(mGoogleApiClient);
 
@@ -856,7 +856,7 @@ public class ActivityHome extends AppCompatActivity
     }
 
 
-    protected  void startCamera() {
+    protected void startCamera() {
         showMessage("Camera started");
 
         // create Intent to take a picture and return control to the calling application
@@ -881,17 +881,7 @@ public class ActivityHome extends AppCompatActivity
             return;
         }
         if (Build.VERSION.SDK_INT >= 8) {
-            // It can prosses after get permission(Marshmallow)
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
+
             mMap.setMyLocationEnabled(true);
             // after get permission mFlagGranted true
             mFlagGranted = true;

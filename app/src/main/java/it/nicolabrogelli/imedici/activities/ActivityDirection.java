@@ -36,6 +36,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.nineoldandroids.view.ViewPropertyAnimator;
 
 import org.w3c.dom.Document;
 
@@ -50,7 +51,7 @@ import it.nicolabrogelli.imedici.utils.Utils;
 //import net.i2p.android.ext.floatingactionbutton.FloatingActionButton;
 
 /**
- * Design and developed by Nicola Brogelli
+ * Design and developed by pongodev.com
  *
  * ActivityDirection is created to display direction to location from user position.
  * Created using AppCompatActivity.

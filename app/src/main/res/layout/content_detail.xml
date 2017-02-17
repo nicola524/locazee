@@ -145,12 +145,11 @@
 
         </LinearLayout>
 
-
+        <!-- Map card -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cardview_light_background"
-            android:visibility="visible">
+            android:background="@color/cardview_light_background">
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="10dp"
@@ -160,28 +159,24 @@
                 android:src="@drawable/separatore"/>
         </LinearLayout>
 
-        <!-- Map card -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
-            >
+            android:visibility="visible">
 
             <fragment xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/map"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
-            />
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cardview_light_background"
-            android:visibility="visible">
+            android:background="@color/cardview_light_background">
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="10dp"
@@ -192,21 +187,14 @@
                 android:src="@drawable/separatore"/>
         </LinearLayout>
 
-        <!-- WEB WIEW -->
-        <LinearLayout
+        <WebView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <WebView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/webView"
-                android:background="@color/cardview_light_background"
-                android:layout_gravity="center_horizontal"
-                android:visibility="visible"
-                />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:id="@+id/webView"
+            android:background="@color/cardview_light_background"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            />
 
         <!-- Admob banner -->
         <com.google.android.gms.ads.AdView
